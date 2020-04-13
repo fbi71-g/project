@@ -1,5 +1,6 @@
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
+using project.Models;
 
 namespace project.Controllers
 {
@@ -11,7 +12,14 @@ namespace project.Controllers
         [HttpGet]
         public ActionResult<string> Get()
         {
-            return Ok(Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion);
+            var versionInfo = new Version
+            {
+                Company = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyCompanyAttribute>().Company,
+                Product = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyProductAttribute>().Product,
+                ProductVersion = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion
+            };
+
+            return Ok(versionInfo);
         }
     }
 }
