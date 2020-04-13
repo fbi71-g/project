@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using project.Models;
+using project.Storage;
 
 namespace project.Controllers
 {
@@ -9,7 +10,7 @@ namespace project.Controllers
    [ApiController]
    public class LabController : ControllerBase
    {
-       private static List<Lab1Data> _memCache = new List<Lab1Data>();
+      private static IStorage<Lab1Data> _memCache = new MemCache();
 
       [HttpGet]
        public ActionResult<IEnumerable<Lab1Data>> Get()

@@ -7,6 +7,7 @@ namespace project.Models
 {
     public class Lab1Data
     {
+	public Guid Id { get; set; } = Guid.Empty;
         public string Name { get; set; } // марка смартфона
         public double Price { get; set; } // цена
         public bool Sim { get; set; } // поддержка двух сим-карт
