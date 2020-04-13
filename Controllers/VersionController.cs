@@ -1,8 +1,8 @@
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
-using pavlovLab.Models;
+using project.Models;
 
-namespace pavlovLab.Controllers
+namespace project.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
