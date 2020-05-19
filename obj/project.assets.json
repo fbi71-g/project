@@ -11798,7 +11798,7 @@
     "C:\\Users\\minam\\Desktop\\.net-core-sdk\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "0.0.2-rc.1",
+    "version": "0.0.3-rc.1",
     "restore": {
       "projectUniqueName": "C:\\Users\\minam\\Desktop\\project\\project.csproj",
       "projectName": "MyApp",
