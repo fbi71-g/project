@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using project.Models;
 using project.Storage;
+using Serilog;
 
 namespace project
 {
@@ -28,6 +29,8 @@ namespace project
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+             ConfigureLogger();
+
             switch (Configuration["Storage:Type"].ToStorageEnum())
             {
                 case StorageEnum.MemCache:
@@ -42,6 +45,14 @@ namespace project
             }
         }
 
+private void ConfigureLogger()
+       {
+           var log = new LoggerConfiguration()
+               .WriteTo.Console()
+               .WriteTo.File("logs\\labs.log", rollingInterval: RollingInterval.Day)
+               .CreateLogger();
+           Log.Logger = log;
+       }
 
         // This method gets called by the runtime. Use this method to add services to the container.
 
