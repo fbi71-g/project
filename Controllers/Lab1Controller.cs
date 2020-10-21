@@ -5,6 +5,7 @@ using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
 using project.Models;
 using project.Storage;
+using Serilog;
 
 namespace project.Controllers
 {
@@ -22,13 +23,14 @@ namespace project.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Lab1Data>> Get()
         {
+            Log.Information("View all models");
             return Ok(_memCache.All);
         }
 
         [HttpGet("{id}")]
         public ActionResult<Lab1Data> Get(Guid id)
         {
-            if (!_memCache.Has(id)) return NotFound("No such");
+           if (!_memCache.Has(id)) return NotFound("No such");
 
             return Ok(_memCache[id]);
         }
@@ -41,6 +43,8 @@ namespace project.Controllers
             if (!validationResult.IsValid) return BadRequest(validationResult.Errors);
 
             _memCache.Add(value);
+
+            Log.Information($"New model added {value.ToString()}");
 
             return Ok($"{value.ToString()} has been added");
         }
