@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "618a6781e1bdffdbefaa6651bc208bfeecba19b8"
+    "signature": "e0b0deb5831e90fe1d11828b91b150f13ba1a42c"
   },
   "compilationOptions": {
     "defines": [
@@ -24,7 +24,6 @@
     ".NETCoreApp,Version=v2.1": {
       "project/1.0.0": {
         "dependencies": {
-          "GitVersion": "3.6.5",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
@@ -37,17 +36,6 @@
         },
         "compile": {
           "project.dll": {}
-        }
-      },
-      "GitVersion/3.6.5": {
-        "runtime": {
-          "lib/Net45/GitVersionCore.dll": {
-            "assemblyVersion": "3.6.5.0",
-            "fileVersion": "3.6.5.0"
-          }
-        },
-        "compile": {
-          "lib/Net45/GitVersionCore.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -3221,13 +3209,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "GitVersion/3.6.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-6GkIW/wjYj545gWrxWGhW3U33oLP6cX8JS+lMvEqIHQSjWFfFlh2+kBGkga4jGS5Uui6c6KAPTZaNxhE5qrv2A==",
-      "path": "gitversion/3.6.5",
-      "hashPath": "gitversion.3.6.5.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",

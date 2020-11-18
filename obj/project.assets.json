@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "GitVersion/3.6.5": {
-        "type": "package",
-        "compile": {
-          "lib/Net45/GitVersionCore.dll": {}
-        },
-        "runtime": {
-          "lib/Net45/GitVersionCore.dll": {}
-        }
-      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4396,20 +4387,6 @@
     }
   },
   "libraries": {
-    "GitVersion/3.6.5": {
-      "sha512": "6GkIW/wjYj545gWrxWGhW3U33oLP6cX8JS+lMvEqIHQSjWFfFlh2+kBGkga4jGS5Uui6c6KAPTZaNxhE5qrv2A==",
-      "type": "package",
-      "path": "gitversion/3.6.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "gitversion.3.6.5.nupkg.sha512",
-        "gitversion.nuspec",
-        "lib/Net45/GitVersionCore.dll",
-        "lib/Net45/GitVersionCore.pdb",
-        "lib/Net45/GitVersionCore.xml"
-      ]
-    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "AIgEc1up4pvH8kXy+eG1x4Qfqd6piAq3yk11pveCQXWNkkYoiKdflSmcJZuWcerdMcAaoF0xC/mWGoTW4vF4Dg==",
       "type": "package",
@@ -11976,7 +11953,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "GitVersion >= 3.6.5",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
@@ -12026,10 +12002,6 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
-          "GitVersion": {
-            "target": "Package",
-            "version": "[3.6.5, )"
-          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12066,17 +12038,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'GitVersion 3.6.5' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
-      "libraryId": "GitVersion",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }
