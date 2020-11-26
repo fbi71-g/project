@@ -43,6 +43,7 @@ namespace project
                 default:
                     throw new IndexOutOfRangeException($"Storage type '{Configuration["Storage:Type"]}' is unknown");
             }
+            services.AddScoped<StorageService, StorageService>();
         }
 
 private void ConfigureLogger()
